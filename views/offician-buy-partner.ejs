@@ -190,8 +190,10 @@
                 <div class="card shadow mb-4">
                     <div class="card-header py-3">
                         <h6 class="m-0 font-weight-bold text-primary">รายชื่อคู่ค้าในระบบ</h6>
-                        <button class="button is-success" style="margin-left: 75%; color: white;"
-                            onclick="location.href='/offician/partner/addBuy'">เพิ่มคู่ค้าใหม่</button>
+                        <button class="button is-success" style="margin-left: 70%; color: white;"
+                            onclick="location.href='/offician/partner/addSell'">เพิ่มคู่ค้าใหม่</button>
+                        <button class="btn btn-primary" style="margin-left: 1%; color: white;"
+                            onclick="location.href='./partner/<%= 0 %>'">ข้าม</button>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
@@ -229,7 +231,7 @@
                                         <td style="text-align: center;">
                                             <%= partner[i].partner_type %>
                                         </td>
-                                        <td style="text-align: center;"><a href="./buy/partner/<%= partner[i]._id %>"
+                                        <td style="text-align: center;"><a href="./partner/<%= partner[i]._id %>"
                                                 class="btn btn-primary">เลือก</a>
                                         </td>
                                     </tr>

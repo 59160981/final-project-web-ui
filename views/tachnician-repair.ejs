@@ -121,7 +121,7 @@
                                                 <tr>
                                                     <th style="text-align: center">รายการซ่อม</th>
                                                     <th style="text-align: center">จำนวน</th>
-                                                    <th style="text-align: center">ราคา</th>
+                                                    <th style="text-align: center">ราคา(บาท)</th>
                                                     <th style="text-align: center">หมายเหตุ</th>
                                                 </tr>
                                             </tfoot>
@@ -135,7 +135,7 @@
                                                         <%= order.details[i].amount %>
                                                     </td>
                                                     <td style="text-align: center">
-                                                        <%= parseFloat(order.details[i].price).toLocaleString(undefined, {minimumFractionDigits : 2,maximumFractionDigits: 2}) %> บาท
+                                                        <%= parseFloat(order.details[i].price).toLocaleString(undefined, {minimumFractionDigits : 2,maximumFractionDigits: 2}) %>
                                                     </td>
                                                     <td style="text-align: center">
                                                         <a

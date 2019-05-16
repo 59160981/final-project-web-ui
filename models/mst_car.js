@@ -8,7 +8,7 @@ const Car = new Schema({
   tanknumber: {type: String},
   color: {type: String},
   power: {type: String},
-  price: {type: String},
+  price: {type: Number},
   type: {type: String}}, 
   {
     collection: 'mst_car'
