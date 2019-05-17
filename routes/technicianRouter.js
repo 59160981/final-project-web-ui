@@ -13,7 +13,7 @@ Router.route('/mainpage').get(function (req, res) {
         User.findById({ _id: userLogin }, function (err, user) {
             // console.log(user)
             userName = user.firstname + " " + user.lastname
-            carReceipt.find({ status: "ยังไม่ซ่อม" }, function (err, carreceipt) {
+            carReceipt.find({status:"ยังไม่ซ่อม"}, function (err, carreceipt) {
                 // console.log(carreceipt)
                 res.render('tachnician-mainpage', { login: userName, carreceipt: carreceipt });
             })

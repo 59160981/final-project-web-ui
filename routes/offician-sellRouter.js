@@ -125,7 +125,7 @@ Router.route('/promise/sell').get(function (req, res) {
         User.findById(userLogin, function (err, user) {
             userName = user.firstname + " " + user.lastname
             Custo.findById(cusID, function (err, customer) {
-                Car.findById(carID, function (err, car) {
+                Car.findByIdAndRemove(carID, function (err, car) {
                     console.log(car)
                     customerChoose = customer
                     // Get current date
@@ -136,7 +136,7 @@ Router.route('/promise/sell').get(function (req, res) {
                     today = mm + '-' + dd + '-' + yyyy;
                     // End
                     //ราคารวม totalPrice
-                    const totalPrice = parseFloat(car.price) + parseFloat(car.price* 0.07) 
+                    const totalPrice = parseFloat(car.price) + parseFloat(car.price * 0.07)
                     res.render('promiseSell', { login: userName, custo: customer, car: car, today: today, totalPrice: totalPrice, emp: user });
                 })
             })
@@ -153,6 +153,7 @@ Router.route('/bill/Sell').get(function (req, res) {
         console.log("ID ORDER" + ID_order)
         User.findById(userLogin, function (err, user) {
             userName = user.firstname + " " + user.lastname
+
             Custo.findById(cusID, function (err, customer) {
                 // Get current date
                 var today = new Date();
@@ -169,6 +170,8 @@ Router.route('/bill/Sell').get(function (req, res) {
                 })
 
             })
+
+
         })
     }
 })

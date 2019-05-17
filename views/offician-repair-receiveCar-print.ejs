@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
 
 
-    <title>บันทึกใบรับรถ</title>
+    <title>ซ่อมรถ</title>
 
     <!-- Custom fonts for this template -->
     <link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -41,7 +41,7 @@
                     <!-- <i class="fas fa-laugh-wink"></i> -->
                     <img src="/img/choktawee.png" width="60" height="60" class="logo" alt="">
                 </div>
-                <div class="sidebar-brand-text mx-3">โชคทวี ออโด้เซลล์</div>
+                <div class="sidebar-brand-text mx-3" style="color: white">ซ่อมรถ</div>
             </a>
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
@@ -136,6 +136,7 @@
         </ul>
 
         <!-- Content Wrapper -->
+
         <div id="content-wrapper" class="d-flex flex-column">
 
             <!-- Main Content -->
@@ -143,7 +144,9 @@
 
                 <!-- Topbar -->
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-                    ----
+                    <label style="margin-left: 30%;">
+                        <H3>บริษัท โชคทวี ออโต้เซลล์ จำกัด.</H3>
+                    </label>
 
                     <!-- Sidebar Toggle (Topbar) -->
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -177,104 +180,123 @@
                 <!-- End of Topbar -->
 
 
+                <div id="print">
+                    <!-- Begin Page Content -->
+                    <div class="container-fluid">
 
-                <!-- Begin Page Content -->
-                <div class="container-fluid">
-
-                    <div class="card mb-4 py-3 border-light" style="padding: 10px; margin-top: 4vh;">
-
-                        <div class="field is-horizontal" style="width: 150%;">
-                            <div class="field-label is-normal">
-                                <p style="margin-top: 0.15vw;">
-                                    <label class="label">รหัสใบรับรถ :</label>
-                                </p>
-
-                                <p style="margin-top: 2vw;">
-                                    <label class="label">รหัสบัตรประจำตัวประชาชน :</label>
-                                </p>
-
-                                <P style="margin-top: 2vw;">
-                                    <label class="label">รหัสพนักงาน :</label>
-                                </P>
-
-                                <P style="margin-top: 2vw;">
-                                    <label class="label">ทะเบียนรถ :</label>
-                                </P>
-
-                                <P style="margin-top: 2vw;">
-                                    <label class="label">วันทำเอกสาร :</label>
-                                </P>
-
-                                <P style="margin-top: 2vw;">
-                                    <label class="label">วันรับรถ :</label>
-                                </P>
-
-                            </div>
-
-                            <div class="field-body">
-                                <div class="field">
-
-
-                                    <p class="control">
-                                        <input name="register" class="input" type="text" placeholder=""
-                                            style="width:50%" value="<%= data.ID_car_receipt %>" readonly>
+                       
+                        <div class="card mb-4 py-3 border-light" style="padding: 10px; margin-top: 4vh;">
+                            <center>
+                                <h3 class="m-0 font-weight-bold text-dark">ใบรับรถ</h6>
+                            </center>
+                            <br>
+                            <div class="field is-horizontal" style="width: 150%;">
+                                <div class="field-label is-normal">
+                                    <p style="margin-top: 0.15vw;">
+                                        <label class="label">รหัสใบรับรถ :</label>
                                     </p>
 
-                                    <p class="control">
-                                        <input name="generation" class="input" type="text" placeholder=""
-                                            style="width:50%" value="<%= data.ID_customer %>" readonly>
+                                    <p style="margin-top: 2vw;">
+                                        <label class="label">รหัสออเดอร์ :</label>
                                     </p>
 
-                                    <p class="control">
-                                        <input name="color" class="input" type="text" placeholder="" style="width:50%"
-                                            value="<%= data.ID_employee %>" readonly>
+                                    <p style="margin-top: 2vw;">
+                                        <label class="label">รหัสบัตรประจำตัวประชาชน :</label>
                                     </p>
 
-                                    <p class="control">
-                                        <input name="datein" class="input" type="date" placeholder="" style="width:50%"
-                                            value="<%= data.register %>" readonly>
-                                    </p>
+                                    <P style="margin-top: 2vw;">
+                                        <label class="label">รหัสพนักงาน :</label>
+                                    </P>
 
-                                    <p class="control">
-                                        <input name="dateout" class="input" type="date" placeholder="" style="width:50%"
-                                            value="<%= data.datein %>" readonly>
-                                    </p>
+                                    <P style="margin-top: 2vw;">
+                                        <label class="label">ทะเบียนรถ :</label>
+                                    </P>
 
-                                    <p class="control">
-                                        <input name="dateout" class="input" type="date" placeholder="" style="width:50%"
-                                            value="<%= data.dateout %>" readonly>
-                                    </p>
+                                    <P style="margin-top: 2vw;">
+                                        <label class="label">วันทำเอกสาร :</label>
+                                    </P>
 
-                                    <p>
-                                        <button type="button" class="button is-success"
-                                            style="margin-top: 1.5vw; margin-left: 42.5vw; color: white;">พิมพ์</button>
-                                    </p>
+                                    <P style="margin-top: 2vw;">
+                                        <label class="label">วันรับรถ :</label>
+                                    </P>
 
+                                </div>
+
+                                <div class="field-body">
+                                    <div class="field">
+
+
+                                        <p class="control">
+                                            <input name="register" class="input" type="text" placeholder=""
+                                                style="width:50%" value="<%= data.ID_car_receipt %>" readonly>
+                                        </p>
+
+                                        <p class="control">
+                                            <input name="register" class="input" type="text" placeholder=""
+                                                style="width:50%" value="<%= data2 %>" readonly>
+                                        </p>
+
+                                        <p class="control">
+                                            <input name="generation" class="input" type="text" placeholder=""
+                                                style="width:50%" value="<%= data.ID_customer %>" readonly>
+                                        </p>
+
+                                        <p class="control">
+                                            <input name="color" class="input" type="text" placeholder=""
+                                                style="width:50%" value="<%= data.ID_employee %>" readonly>
+                                        </p>
+
+                                        <p class="control">
+                                            <input name="register" class="input" type="text" placeholder=""
+                                                style="width:50%" value="<%= data.register %>" readonly>
+                                        </p>
+
+                                        <p class="control">
+                                            <input name="colour" class="input" type="text" placeholder=""
+                                                style="width:50%" value="<%= data.datein %>" readonly>
+                                        </p>
+
+                                        <p class="control">
+                                            <input name="dateout" class="input" type="text" placeholder=""
+                                                style="width:50%" value="<%= data.dateout %>" readonly>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
-                <!-- /.container-fluid -->
-
-
+                <p>
+                    <button type="button" class="button is-success"
+                        style="margin-top: 1.5vw; margin-left: 42.5vw; color: white;"
+                        onclick="printDiv()">พิมพ์</button>
+                </p>
 
             </div>
-            <!-- End of Main Content -->
-
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; 2562 Object-Oriented Analysis and Design.</span>
-                    </div>
-                </div>
-            </footer>
-            <!-- End of Footer -->
-
         </div>
-        <!-- End of Content Wrapper -->
+    </div>
+    </div>
+
+    </div>
+    <!-- /.container-fluid -->
+
+
+
+    </div>
+    <!-- End of Main Content -->
+
+    <!-- Footer -->
+    <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+                <span>Copyright &copy; 2562 Daimond Development</span>
+            </div>
+        </div>
+    </footer>
+    <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
 
     </div>
     <!-- End of Page Wrapper -->
@@ -315,7 +337,7 @@
     <!-- Custom scripts for all pages-->
     <script src="/js/sb-admin-2.min.js"></script>
     <script src="/js/checkAddCar.js"></script>
-
+    <script src="/js/printPage.js"></script>
     <!-- Page level plugins -->
     <script src="/vendor/datatables/jquery.dataTables.min.js"></script>
     <script src="/vendor/datatables/dataTables.bootstrap4.min.js"></script>

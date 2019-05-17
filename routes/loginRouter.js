@@ -1,7 +1,6 @@
-const express = require('express');
-const Router = express.Router();
-const User = require('../models/mst_employee');
-
+const express = require('express')
+const Router = express.Router()
+const User = require('../models/mst_employee')
 Router.route('/').get(function (req, res) {
     res.render('login', { err: false });
 });

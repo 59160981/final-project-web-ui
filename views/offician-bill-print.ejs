@@ -41,7 +41,7 @@
                     <!-- <i class="fas fa-laugh-wink"></i> -->
                     <img src="/img/choktawee.png" width="60" height="60" class="logo" alt="">
                 </div>
-                <div class="sidebar-brand-text mx-3">โชคทวี ออโด้เซลล์</div>
+                <div class="sidebar-brand-text mx-3"  style="color: white">ใบเสร็จชำระเงิน</div>
             </a>
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
@@ -143,8 +143,7 @@
 
                 <!-- Topbar -->
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-                    ----
-
+                    <label style="margin-left: 30%;"><H3>บริษัท โชคทวี ออโต้เซลล์ จำกัด.</H3></label>
                     <!-- Sidebar Toggle (Topbar) -->
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
@@ -179,13 +178,11 @@
 
 
                 <!-- Begin Page Content -->
-                <div class="container-fluid">
 
-
-                </div>
                 <!-- /.container-fluid -->
 
                 <!-- Table -->
+                <div id="print">
 
                 <div class="card shadow mb-4">
                     <br>
@@ -248,10 +245,11 @@
                                 </tbody>
                             </table>
                         </div>
+                    </div></div></div>
                         <center>
                             <button class="btn btn-success" type="button"
                                 onclick="location.href='/offician/bill/<%= order._id %>/pay'">ยืนยันการชำระเงิน</button>
-                            <button class="btn btn-primary" type="button">พิมพ์ใบเสร็จ</button>
+                            <button class="btn btn-primary" type="button" onclick="printDiv()">พิมพ์ใบเสร็จ</button>
                             <button class="btn btn-google" type="button"
                                 onclick="location.href='/offician/taxInvoice/<%= order._id %>'">ใบกำกับภาษี</button>
                         </center>
@@ -267,7 +265,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; 2562 Object-Oriented Analysis and Design.</span>
+                        <span>Copyright &copy; 2562 Daimond Development</span>
                     </div>
                 </div>
             </footer>
@@ -315,7 +313,7 @@
     <!-- Custom scripts for all pages-->
     <script src="/js/sb-admin-2.min.js"></script>
     <script src="/js/checkAddCar.js"></script>
-
+    <script src="/js/printPage.js"></script>
     <!-- Page level plugins -->
     <script src="/vendor/datatables/jquery.dataTables.min.js"></script>
     <script src="/vendor/datatables/dataTables.bootstrap4.min.js"></script>

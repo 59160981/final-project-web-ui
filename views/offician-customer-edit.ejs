@@ -41,7 +41,7 @@
                     <!-- <i class="fas fa-laugh-wink"></i> -->
                     <img src="/img/choktawee.png" width="60" height="60" class="logo" alt="">
                 </div>
-                <div class="sidebar-brand-text mx-3">โชคทวี ออโด้เซลล์</div>
+                <div class="sidebar-brand-text mx-3" style="color: white">จัดการลูกค้า</div>
             </a>
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
@@ -143,7 +143,9 @@
 
                 <!-- Topbar -->
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-                    ----
+                    <label style="margin-left: 30%;">
+                        <H3>บริษัท โชคทวี ออโต้เซลล์ จำกัด.</H3>
+                    </label>
 
                     <!-- Sidebar Toggle (Topbar) -->
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -229,34 +231,40 @@
 
                                     <div class="field-body">
                                         <div class="field">
-                                            <form id="addCustomer" method="POST" action="/offician/customer/edit/<%= customer._id %>">
+                                            <form id="addCustomer" method="POST"
+                                                action="/offician/customer/edit/<%= customer._id %>">
 
                                                 <p class="control">
-                                                    <input id="ID_customer" name="ID_customer" class="input" type="text" value="<%= customer.ID_customer %>"
-                                                        placeholder="" style="width:50%" maxlength="13"
-                                                        onkeyup="checkInputID()" onkeypress="checkInputID()" readonly>
+                                                    <input id="ID_customer" name="ID_customer" class="input" type="text"
+                                                        value="<%= customer.ID_customer %>" placeholder=""
+                                                        style="width:50%" maxlength="13" onkeyup="checkInputID()"
+                                                        onkeypress="checkInputID()" readonly>
                                                 </p>
 
                                                 <p class="control">
-                                                    <input id="firstname" name="firstname" class="input" type="text" value="<%= customer.firstname %>"
-                                                        placeholder="" style="width:50%" maxlength="50"
-                                                        onkeyup="checkInputFname()" onkeypress="checkInputFname()">
+                                                    <input id="firstname" name="firstname" class="input" type="text"
+                                                        value="<%= customer.firstname %>" placeholder=""
+                                                        style="width:50%" maxlength="50" onkeyup="checkInputFname()"
+                                                        onkeypress="checkInputFname()">
                                                 </p>
 
                                                 <p class="control">
-                                                    <input id="lastname" name="lastname" class="input" type="text" value="<%= customer.lastname %>"
-                                                        placeholder="" style="width:50%" maxlength="50"
-                                                        onkeyup="checkInputLname()" onkeypress="checkInputLname()">
+                                                    <input id="lastname" name="lastname" class="input" type="text"
+                                                        value="<%= customer.lastname %>" placeholder=""
+                                                        style="width:50%" maxlength="50" onkeyup="checkInputLname()"
+                                                        onkeypress="checkInputLname()">
                                                 </p>
 
                                                 <p class="control">
-                                                    <input id="birthday" name="birthday" class="input" type="date" value="<%= customer.birthday %>"
-                                                        placeholder="" style="width:50%" maxlength="10">
+                                                    <input id="birthday" name="birthday" class="input" type="date"
+                                                        value="<%= customer.birthday %>" placeholder=""
+                                                        style="width:50%" maxlength="10">
                                                 </p>
                                                 <p class="control">
                                                     <div class="select">
                                                         <select id="gender" name="gender">
-                                                            <option value="<%= customer.gender %>" hidden><%= customer.gender %></option>
+                                                            <option value="<%= customer.gender %>" hidden>
+                                                                <%= customer.gender %></option>
                                                             <option value="ชาย">ชาย</option>
                                                             <option value="หญิง">หญิง</option>
                                                         </select>
@@ -265,18 +273,21 @@
 
                                                 <p class="control">
                                                     <textarea id="address" name="address" cols="30" rows="10"
-                                                        style="width:50%;height: 67px;" maxlength="100"><%= customer.address %></textarea>
+                                                        style="width:50%;height: 67px;"
+                                                        maxlength="100"><%= customer.address %></textarea>
                                                 </p>
 
                                                 <p class="control">
-                                                    <input id="telephone" name="telephone" class="input" type="text" value="<%= customer.telephone %>"
-                                                        placeholder="" style="width:50%" maxlength="10"
-                                                        onkeyup="checkInputTel()" onkeypress="checkInputTel()">
+                                                    <input id="telephone" name="telephone" class="input" type="text"
+                                                        value="<%= customer.telephone %>" placeholder=""
+                                                        style="width:50%" maxlength="10" onkeyup="checkInputTel()"
+                                                        onkeypress="checkInputTel()">
                                                 </p>
 
                                                 <p class="control">
-                                                    <input id="email" name="email" class="input" type="text" value="<%= customer.email %>"
-                                                        placeholder="" style="width:50%" maxlength="30">
+                                                    <input id="email" name="email" class="input" type="text"
+                                                        value="<%= customer.email %>" placeholder="" style="width:50%"
+                                                        maxlength="30">
                                                 </p>
                                             </form>
 
@@ -309,7 +320,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; 2562 Object-Oriented Analysis and Design.</span>
+                        <span>Copyright &copy; 2562 Daimond Development</span>
                     </div>
                 </div>
             </footer>

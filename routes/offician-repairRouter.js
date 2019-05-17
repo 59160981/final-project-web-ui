@@ -5,6 +5,7 @@ const Custo = require('../models/mst_customer');
 const carReceipt = require('../models/trn_car_receipt');
 const Order = require('../models/trn_order');
 userLogin = ""
+var orderID = ""
 
 //จัดการซ่อม
 Router.route('/').get(function (req, res) {
@@ -71,10 +72,13 @@ Router.route('/receiveCar/:id').post(function (req, res) {
                             status: "ยังไม่จ่าย",
                             order_type: "การซ่อม"
                         })
+                        orderID = data_order.ID_order
                         console.log(data_order)
+                        console.log("ID :" + ID_order)
                         data_order.save()
-                    })
-                    res.render('offician-repair-receiveCar-print',{login:userName,data:data_car_receipt})
+                        res.render('offician-repair-receiveCar-print',{login:userName, data:data_car_receipt, data2:data_order.ID_order})
+
+                    })  
                 })
             })
         })

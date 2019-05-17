@@ -113,7 +113,7 @@ select {
   text-decoration: none;
   outline: none;
   color: #fff;
-  background-color: rgb(7, 224, 0);
+  background-color: #007bff;
   border: none;
   border-radius: 8px;
 }

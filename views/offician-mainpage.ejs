@@ -41,7 +41,7 @@
                     <!-- <i class="fas fa-laugh-wink"></i> -->
                     <img src="/img/choktawee.png" width="60" height="60" class="logo" alt="">
                 </div>
-                <div class="sidebar-brand-text mx-3">โชคทวี ออโด้เซลล์</div>
+                <div class="sidebar-brand-text mx-3" style="color: white">โชคทวี ออโต้เซลล์</div>
             </a>
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
@@ -134,7 +134,7 @@
                     <span>จัดการคู่ค้า</span></a>
             </li>
         </ul>
-        
+
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
 
@@ -143,7 +143,9 @@
 
                 <!-- Topbar -->
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-                    ----
+                    <label style="margin-left: 30%;">
+                        <H3>บริษัท โชคทวี ออโต้เซลล์ จำกัด.</H3>
+                    </label>
 
                     <!-- Sidebar Toggle (Topbar) -->
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -176,14 +178,31 @@
                 </nav>
                 <!-- End of Topbar -->
 
+                <!-- Content Wrapper -->
+                <div class="card-body">
+                    <div class="card shadow">
+                        <div class="card-header py-3">
+                            <h5>รายรับ-รายจ่ายทั้งหมดของบริษัท</h5>
+                        </div>
+                        <div class="card-body py-3">
+                            <center>
+                                    รายได้สุทธิ <input class="input" style="width:20%" type="text" value="<%=  parseFloat(total).toLocaleString(undefined, {minimumFractionDigits : 2,maximumFractionDigits: 2}) %>" readonly>
+                                    บาท
+                                    <hr>
+                                รายได้จากการขาย <input class="input" style="width:20%" type="text" value="<%=  parseFloat(totalSell).toLocaleString(undefined, {minimumFractionDigits : 2,maximumFractionDigits: 2}) %>" readonly>
+                                บาท <br> <br>
+                                รายได้จากการซ่อม <input class="input" style="width:20%" type="text" value="<%=  parseFloat(totalRepair).toLocaleString(undefined, {minimumFractionDigits : 2,maximumFractionDigits: 2}) %>" readonly>
+                                บาท <br> <br>
+                                รายได้จากการเดินทะเบียน <input class="input" style="width:20%" type="text" value="<%=  parseFloat(totalRegister).toLocaleString(undefined, {minimumFractionDigits : 2,maximumFractionDigits: 2}) %>" readonly> บาท  
+                            <hr>
+                            รายจ่ายจากการซื้อ <input class="input" style="width:20%" type="text" value="<%=  parseFloat(totalBuy).toLocaleString(undefined, {minimumFractionDigits : 2,maximumFractionDigits: 2}) %>" readonly>
+                                    บาท <br> <br>
+                            </center>
+                        </div>
+                    </div>
 
-
-                <!-- Begin Page Content -->
-                <div class="container-fluid">
-
-                    
                 </div>
-
+                
                 <!-- /.container-fluid -->
 
             </div>
@@ -193,7 +212,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; 2562 Object-Oriented Analysis and Design.</span>
+                        <span>Copyright &copy; 2562 Daimond Development</span>
                     </div>
                 </div>
             </footer>

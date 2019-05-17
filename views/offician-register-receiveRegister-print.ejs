@@ -41,7 +41,7 @@
                     <!-- <i class="fas fa-laugh-wink"></i> -->
                     <img src="/img/choktawee.png" width="60" height="60" class="logo" alt="">
                 </div>
-                <div class="sidebar-brand-text mx-3" style="color: white">เดินทะเบียน</div>
+                <div class="sidebar-brand-text mx-3 "  style="color: white">เดินทะเบียน</div>
             </a>
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
@@ -179,65 +179,97 @@
 
 
                 <!-- Begin Page Content -->
+                <div id="print">
                 <div class="container-fluid">
 
+                    <div class="card mb-4 py-3 border-light" style="padding: 10px; margin-top: 4vh;">
+                            <h1 class="h3 mb-1 text-black-800" style="text-align: center; color: black;">ใบรับทะเบียน</h1>
+
+                        <div class="field is-horizontal" style="width: 150%;">
+                            <div class="field-label is-normal">
+                                <p style="margin-top: 0.15vw;">
+                                    <label class="label">รหัสใบรับทะเบียน :</label>
+                                </p>
+
+                                <p style="margin-top: 2vw;">
+                                    <label class="label">รหัสออเดอร์ :</label>
+                                </p>
+
+                                <p style="margin-top: 2vw;">
+                                    <label class="label">รหัสบัตรประจำตัวประชาชน :</label>
+                                </p>
+
+                                <P style="margin-top: 2vw;">
+                                    <label class="label">รหัสพนักงาน :</label>
+                                </P>
+
+                                <P style="margin-top: 2vw;">
+                                    <label class="label">ทะเบียนรถ :</label>
+                                </P>
+
+                                <P style="margin-top: 2vw;">
+                                    <label class="label">วันทำเอกสาร :</label>
+                                </P>
+
+                                <P style="margin-top: 2vw;">
+                                    <label class="label">วันรับรถ :</label>
+                                </P>
+
+                            </div>
+
+                            <div class="field-body">
+                                <div class="field">
+
+
+                                    <p class="control">
+                                        <input name="register" class="input" type="text" placeholder=""
+                                            style="width:50%" value="<%= data.ID_register_receipt %>" readonly>
+                                    </p>
+
+                                    <p class="control">
+                                        <input name="generation" class="input" type="text" placeholder=""
+                                            style="width:50%" value="<%= data2 %>" readonly>
+                                    </p>
+                                    
+                                    <p class="control">
+                                        <input name="generation" class="input" type="text" placeholder=""
+                                            style="width:50%" value="<%= data.ID_customer %>" readonly>
+                                    </p>
+
+                                    <p class="control">
+                                        <input name="color" class="input" type="text" placeholder="" style="width:50%"
+                                            value="<%= data.ID_employee %>" readonly>
+                                    </p>
+
+                                    <p class="control">
+                                        <input name="datein" class="input" type="text" placeholder="" style="width:50%"
+                                            value="<%= data.register %>" readonly>
+                                    </p>
+
+                                    <p class="control">
+                                        <input name="dateout" class="input" type="date" placeholder="" style="width:50%"
+                                            value="<%= data.datein %>" readonly>
+                                    </p>
+
+                                    <p class="control">
+                                        <input name="dateout" class="input" type="date" placeholder="" style="width:50%"
+                                            value="<%= data.dateout %>" readonly>
+                                    </p>
+                                </div></div></div></div></div></div>
+                                    <p>
+                                        <button type="button" class="button is-success"
+                                            style="margin-top: 1.5vw; margin-left: 42.5vw; color: white;" onclick="printDiv()">พิมพ์</button>
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
                 <!-- /.container-fluid -->
 
-                <!-- Table -->
 
-                <div class="card shadow mb-4">
-                    <div class="card-header py-3">
-                        <h6 class="m-0 font-weight-bold text-primary">รายชื่อลูกค้าในระบบ</h6>
-                        <button class="button is-success" style="margin-left: 75%; color: white;"
-                            onclick="location.href='/offician/customer/addRegister'">เพิ่มลูกค้าใหม่</button>
-                    </div>
-                    <div class="card-body">
-                        <div class="table-responsive">
-                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                <thead>
-                                    <tr>
-                                        <th style="text-align: center;">รหัสประจำตัวประชาชน</th>
-                                        <th style="text-align: center;">ชื่อ - นามสกุล</th>
-                                        <th style="text-align: center;">เบอร์โทรศัพท์</th>
-                                        <th style="text-align: center;">หมายเหตุ</th>
-                                    </tr>
-                                </thead>
-                                <tfoot>
-                                    <tr>
-                                        <th style="text-align: center;">รหัสประจำตัวประชาชน</th>
-                                        <th style="text-align: center;">ชื่อ - นามสกุล</th>
-                                        <th style="text-align: center;">เบอร์โทรศัพท์</th>
-                                        <th style="text-align: center;">หมายเหตุ</th>
-                                    </tr>
-                                </tfoot>
-                                <tbody>
-                                    <% for(var i=0; i < custo.length; i++) { %>
-                                    <tr>
-                                        <td style="text-align: center;">
-                                            <%= custo[i].ID_customer %>
-                                        </td>
-                                        <td style="text-align: center;">
-                                            <%= custo[i].firstname %>
-                                            <%= custo[i].lastname %>
-                                        </td>
-                                        <td style="text-align: center;">
-                                            <%= custo[i].telephone %>
-                                        </td>
-                                        <td style="text-align: center;"><a
-                                                href="./register/recieveRegister/<%= custo[i]._id %>"
-                                                class="btn btn-primary">เลือก</a>
-                                        </td>
-                                    </tr>
-                                    <% } %>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- End table -->
 
             </div>
             <!-- End of Main Content -->
@@ -294,7 +326,7 @@
     <!-- Custom scripts for all pages-->
     <script src="/js/sb-admin-2.min.js"></script>
     <script src="/js/checkAddCar.js"></script>
-
+    <script src="/js/printPage.js"></script>
     <!-- Page level plugins -->
     <script src="/vendor/datatables/jquery.dataTables.min.js"></script>
     <script src="/vendor/datatables/dataTables.bootstrap4.min.js"></script>
